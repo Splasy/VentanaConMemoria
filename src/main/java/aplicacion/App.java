@@ -23,17 +23,16 @@ public class App extends Application {
 		controller.getModel().blueProperty().bindBidirectional(configuracion.blueProperty());
 		controller.getModel().greenProperty().bindBidirectional(configuracion.greenProperty());
 
-		// Bindeo de la posición para luego ponérsela
-		configuracion.posXProperty().bind(primaryStage.xProperty());
-		configuracion.posYProperty().bind(primaryStage.yProperty());
-
-		primaryStage.setX(configuracion.getPosX());
-		primaryStage.setY(configuracion.getPosY());
-
 		Scene scene = new Scene(controller.getView(), configuracion.getAncho(), configuracion.getAlto());
 		// Bindeo el tamaño a la ESCENA
 		configuracion.anchoProperty().bind(scene.widthProperty());
 		configuracion.altoProperty().bind(scene.heightProperty());
+
+		//Se le pone primero la posición y luego se le bindea porque sino no abre donde estuvo previamente
+		primaryStage.setX(configuracion.getPosX());
+		primaryStage.setY(configuracion.getPosY());
+		configuracion.posXProperty().bind(primaryStage.xProperty());
+		configuracion.posYProperty().bind(primaryStage.yProperty());
 
 		primaryStage.setTitle("Ventana con memoria");
 		primaryStage.setScene(scene);

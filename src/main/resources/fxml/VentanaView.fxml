@@ -23,15 +23,15 @@
       <Label minHeight="-Infinity" minWidth="-Infinity" text="Red" />
       <Label minHeight="-Infinity" minWidth="-Infinity" text="Green" GridPane.rowIndex="1" />
       <Label minHeight="-Infinity" minWidth="-Infinity" text="Blue" GridPane.rowIndex="2" />
-      <Slider fx:id="redSlider" GridPane.columnIndex="1">
+      <Slider fx:id="redSlider" minHeight="-Infinity" GridPane.columnIndex="1">
          <GridPane.margin>
             <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
          </GridPane.margin></Slider>
-      <Slider fx:id="greenSlider" GridPane.columnIndex="1" GridPane.rowIndex="1">
+      <Slider fx:id="greenSlider" minHeight="-Infinity" GridPane.columnIndex="1" GridPane.rowIndex="1">
          <GridPane.margin>
             <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
          </GridPane.margin></Slider>
-      <Slider fx:id="blueSlider" GridPane.columnIndex="1" GridPane.rowIndex="2">
+      <Slider fx:id="blueSlider" minHeight="-Infinity" GridPane.columnIndex="1" GridPane.rowIndex="2">
          <GridPane.margin>
             <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
          </GridPane.margin></Slider>
